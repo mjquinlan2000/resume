@@ -1,0 +1,1 @@
+angular.module('resumeApp', ['resumeServices', 'resumeControllers', 'resumeDirectives'])
