@@ -3,8 +3,13 @@
     .span12
       %h2 Michael Quinlan
       %p 2905 Inca St, Denver, CO 80202 #2109
-      %p Phone: 720-934-6730
-      %p E-Mail: mjquinlan2000@gmail.com
+      %p
+        Phone:
+        %a{href: 'tel:720-934-6730'} 720-934-6730
+      %p
+        E-Mail:
+        %span
+          %a{href: 'mailto:mjquinlan2000@gmail.com'} mjquinlan2000@gmail.com
   %table.table.table-bordered.table-condensed
     %tbody.details-table
       %tr
@@ -32,7 +37,7 @@
         %td
           Golden, CO
       %tr
-        %td{rowspan: 2}
+        %td{rowspan: 3}
           Work
         %td
           2011-2012
@@ -46,6 +51,16 @@
 
       %tr
         %td
+          2012 (6 weeks)
+        %td
+          %b Disney Online
+          %i - Software Intern
+          %br
+          Worked on a project with a team of ther software interns to use Sinatra, HTML5 Canvas, Require.js, Wire.js, and Backbone.js to build a standalone video editing platform complete with special effects and transitions between video clips to meet a 6 week deadline.
+        %td
+          Boulder, CO
+      %tr
+        %td
           2013-Present
         %td
           %b QualVu Inc.
@@ -54,3 +69,23 @@
           Currently working on a team of Rails developers to deliver a wide variety of multimedia content to third party clients seeking qualitative market research on new and existing products. Using front end frameworks such as Backbone.js, Angular.js, JQuery, and Twitter Bootstrap to better enhance the usability and user experience in the platform. Developed algorithms to encourge better organization and parsing of multimedia content that is returned from our users. Working with the SOLR search engine to speed up query results in a large data set.
         %td
           Lakewood, CO
+
+      %tr
+        %td{colspan: 2}
+          Skills
+        %td{colspan: 2}
+          %ul
+            %li
+              Proficient with Linux/Unix, Macintosh, and Windows operating systems
+            %li
+              Deep understanding of Java, SQL, JavaScript/CoffeeScript, C++, and Ruby
+            %li
+              Have worked extensively in GWT, Spring, Rails, Angular.js, and Backbone.js web frameworks
+            %li
+              Understand how to use Haml/HTML5 and CSS/LESS/SCSS lanuages
+            %li
+              Familiar with the implementation of Agile Software Developing paradigms
+            %li
+              Understanding of how to efficiently unit test code
+            %li
+              Significant understanding of current web standards and cross-browser compatibility
