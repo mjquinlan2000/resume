@@ -1,0 +1,65 @@
+$link-color: #42a0ff;
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  color: lighten(#000,15);
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+@media screen and (max-width: 1279px) {
+  .content {
+    margin: 0 5%;
+  }
+}
+
+table, td, th {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+
+td, th {
+  padding: 10px;
+}
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.date-container {
+  min-width: 160px;
+}
+
+
+@media print {
+  @page { margin: 0; }
+  body { margin: 0.5cm; }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: darken($link-color, 20);
+  }
+}
+
+.title {
+  font-size: 2em;
+}
