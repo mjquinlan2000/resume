@@ -3,7 +3,7 @@
 set -e
 
 gulp clean
-gulp build
+NODE_ENV=production gulp build
 gsutil rsync -R ./dist gs://www.mikequinlan.rocks
 gsutil acl ch -u AllUsers:R \
   'gs://www.mikequinlan.rocks/*.html' \
