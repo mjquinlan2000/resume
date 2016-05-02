@@ -1,0 +1,17 @@
+{
+  "name": "resume",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mike Quinlan <mquinlan@sportslabs.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
