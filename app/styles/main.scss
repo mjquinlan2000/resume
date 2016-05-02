@@ -44,8 +44,13 @@ body {
 
 
 @media print {
-  @page { margin: 0; }
-  body { margin: 0.5cm; }
+  @page {
+    margin: 0;
+  }
+
+  body {
+    margin: 0.5cm;
+  }
 
   .no-print {
     display: none !important;

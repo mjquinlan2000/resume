@@ -4,12 +4,20 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
 var rimraf = require('rimraf');
+var inlineSource = require('gulp-inline-source');
 
 var htmlFiles = ['app/index.jade', 'app/**/*.jade'];
 var cssFiles = ['app/styles/*.scss'];
+var imageFiles = ['app/images/**'];
 
 gulp.task('clean', function(done) {
   rimraf('dist', done)
+});
+
+gulp.task('images', function() {
+  return gulp.src(imageFiles)
+    .pipe(gulp.dest('dist/images'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('serve', function() {
@@ -23,6 +31,7 @@ gulp.task('serve', function() {
 gulp.task('watch', function() {
   gulp.watch(cssFiles, ['css']);
   gulp.watch(htmlFiles, ['html']);
+  gulp.watch(imageFiles, ['images']);
 });
 
 gulp.task('html', function() {
@@ -40,4 +49,10 @@ gulp.task('css', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['css', 'html', 'watch', 'serve']);
+gulp.task('build', ['css', 'html', 'images'], function() {
+  return gulp.src('dist/index.html')
+    .pipe(inlineSource())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', ['css', 'html', 'images', 'watch', 'serve']);
