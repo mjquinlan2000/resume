@@ -1,4 +1,3 @@
-$link-color: #42a0ff;
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -59,10 +58,10 @@ body {
 }
 
 a {
-  color: $link-color;
+  color: #42a0ff;
   text-decoration: none;
   &:hover {
-    color: darken($link-color, 20);
+    color: darken(#42a0ff, 20);
   }
 }
 
