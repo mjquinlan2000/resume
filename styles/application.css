@@ -42,6 +42,20 @@ body {
   min-width: 160px;
 }
 
+a {
+  color: #42a0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #376899;
+}
+
+.title {
+  font-size: 2em;
+}
+
+
 
 @media print {
   @page {
@@ -49,22 +63,14 @@ body {
   }
 
   body {
-    margin: 0.5cm;
+    margin: 1cm;
   }
 
   .no-print {
     display: none !important;
   }
-}
 
-a {
-  color: #42a0ff;
-  text-decoration: none;
-  &:hover {
-    color: darken(#42a0ff, 20);
+  a {
+    color: #000;
   }
-}
-
-.title {
-  font-size: 2em;
 }
