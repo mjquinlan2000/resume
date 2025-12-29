@@ -246,7 +246,7 @@ body {
   z-index: 1;
 }
 
-.timeline-item:first-child .timeline-marker {
+.timeline-item.current .timeline-marker {
   background: var(--primary);
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
 }
