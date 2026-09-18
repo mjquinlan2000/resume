@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #1d2021;
+        --bg-panel: #282828;
+        --fg: #fbf1c7;
+        --fg-dim: #d5c4a1;
+        --fg-faint: #a89984;
+        --accent: #b8bb26;
+        --accent-2: #fe8019;
+        --link: #83a598;
+        --rule: #3c3836;
+        --punct: #998a7a;
+        --label: #d3869b;
+        --tag: #8ec07c;
+        --num: #fabd2f;
+        --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1200px; height: 630px; }
+      body {
+        background: var(--bg);
+        font-family: var(--mono);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        position: relative;
+        width: 1128px;
+        height: 558px;
+        background: var(--bg-panel);
+        border: 2px solid var(--rule);
+        border-radius: 14px;
+        padding: 44px 60px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .card::before {
+        content: '';
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 8px;
+        background: linear-gradient(to bottom, #b8bb26, #8ec07c 35%, #83a598 70%, #504945);
+      }
+      .card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgb(251 241 199 / 0.03) 0 1px,
+          transparent 1px 4px
+        );
+        pointer-events: none;
+      }
+      .chrome {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 22px;
+        color: var(--fg-faint);
+      }
+      .dots { display: flex; gap: 9px; }
+      .dot { width: 13px; height: 13px; border-radius: 50%; }
+      .dot.r { background: #fb4934; }
+      .dot.y { background: var(--num); }
+      .dot.g { background: var(--accent); }
+      .path { color: var(--link); }
+      .prompt { color: var(--accent); }
+      .name {
+        font-size: 82px;
+        font-weight: 700;
+        color: var(--fg);
+        letter-spacing: -1.5px;
+        line-height: 1;
+      }
+      .name .cursor {
+        display: inline-block;
+        width: 32px;
+        height: 66px;
+        background: var(--accent);
+        vertical-align: -8px;
+        margin-left: 12px;
+      }
+      .role {
+        font-size: 38px;
+        font-weight: 500;
+        color: var(--accent-2);
+      }
+      .role .punct { color: var(--punct); }
+      .blurb {
+        font-size: 24px;
+        line-height: 1.45;
+        color: var(--fg-dim);
+        max-width: 900px;
+      }
+      .tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto; }
+      .tag {
+        font-size: 23px;
+        font-weight: 500;
+        color: var(--tag);
+        border: 1px solid var(--rule);
+        border-radius: 7px;
+        padding: 9px 17px;
+        background: rgb(142 192 124 / 0.07);
+      }
+      .foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-top: 1px solid var(--rule);
+        padding-top: 22px;
+        font-size: 24px;
+      }
+      .url { color: var(--fg); font-weight: 500; }
+      .where { color: var(--fg-faint); }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="chrome">
+        <div class="dots"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i></div>
+        <span class="path">~/resume</span>
+        <span class="prompt">$</span>
+        <span>cat michael-quinlan.md</span>
+      </div>
+      <div>
+        <div class="name">Michael Quinlan<i class="cursor"></i></div>
+        <div class="role">Principal Software Architect<span class="punct"> @ </span>GigSmart</div>
+      </div>
+      <p class="blurb">
+        Architecting Elixir/Phoenix backends, Relay-compliant GraphQL APIs, and
+        Kubernetes platform infrastructure for workforce marketplaces.
+      </p>
+      <div class="tags">
+        <span class="tag">Elixir</span>
+        <span class="tag">Phoenix</span>
+        <span class="tag">GraphQL</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Kubernetes</span>
+      </div>
+      <div class="foot">
+        <span class="url">www.mikequinlan.rocks</span>
+        <span class="where">Denver, CO</span>
+      </div>
+    </div>
+  </body>
+</html>
